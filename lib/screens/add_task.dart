@@ -22,11 +22,11 @@ class _AddTaskState extends State<AddTask> {
         children: [
           TextField(
             controller: _titleController,
-            decoration: InputDecoration(labelText: 'Title'),
+            decoration: const InputDecoration(labelText: 'Title'),
           ),
           TextField(
             controller: _descriptionController,
-            decoration: InputDecoration(labelText: 'Description'),
+            decoration: const InputDecoration(labelText: 'Description'),
           ),
           DropdownButton(
               items: <String>['General', 'Personal', 'Academic']
