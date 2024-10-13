@@ -1,16 +1,44 @@
-# hello_task_manager
+# Hello Task Manager
 
-A new Flutter project.
+## Overview
+This is a simple task management mobile application built with Flutter. The app serves as a personal project to refresh my knowledge of Flutter concepts, state management, and the Provider package.
+
+## Features
+- Add, edit, and delete tasks
+- Mark tasks as completed
+- Simple and intuitive user interface
+
+## Technologies Used
+- Flutter
+- Dart
+- Provider for state management
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
+- Flutter SDK installed on your machine
+- An IDE (like Android Studio or Visual Studio Code)
 
-A few resources to get you started if this is your first Flutter project:
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/asiripr/hello_task_manager.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd hello_task_manager
+   ```
+3. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+4. Run the app:
+   ```bash
+   flutter run
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Contributing
+Feel free to fork the repository and submit pull requests for any improvements or features you'd like to add!
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Acknowledgments
+Thanks to the Flutter community for their resources and support!
