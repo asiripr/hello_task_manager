@@ -1,32 +1,30 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:hello_task_manager/models/task_model.dart';
 
 class TaskProvider with ChangeNotifier{
   List<Task> _tasks = [];
 
-  List<Task> get tasks => _tasks; // no idea
+// to get all the tasks
+UnmodifiableListView <Task> get allTasks => UnmodifiableListView(_tasks);
 
-  void addTask(Task task){
-    _tasks.add(task);
+// a mehtod for add tasks
+  void addTask(String task){
+    _tasks.add(Task(title: task, isCompleted: false));
     notifyListeners(); // no idea
   }
 
-  void toggleTaskStatus(int index){
-    _tasks[index].isCompleted = !_tasks[index].isCompleted;
+// a method for mark task completed or not
+  void toggleTaskStatus(Task task){
+    final taskIndex = _tasks.indexOf(task);
+    _tasks[taskIndex].toggleCompleted();
     notifyListeners();
   }
 
-  void removeTask(int index){
-    _tasks.removeAt(index);
+// removeTask method for delete a task.
+  void removeTask(Task task){
+    _tasks.remove(task);
     notifyListeners();
   }
-
-  // no idea
-
-  List<Task> get pendingTasks =>
-      _tasks.where((task) => !task.isCompleted).toList();
-
-  List<Task> get completedTasks =>
-      _tasks.where((task) => task.isCompleted).toList();
-
 }
