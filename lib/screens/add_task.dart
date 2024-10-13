@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_task_manager/models/task_model.dart';
 
 class AddTask extends StatefulWidget {
   const AddTask({super.key});
@@ -10,9 +11,9 @@ class AddTask extends StatefulWidget {
 class _AddTaskState extends State<AddTask> {
   final _titleController = TextEditingController();
   final _descriptionController = TextEditingController();
-  String _selectedCategory = 'Genaral';
+  String _selectedCategory = 'All';
 
-  @override
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
