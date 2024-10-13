@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_task_manager/models/task_model.dart';
 import 'package:hello_task_manager/providers/task_provider.dart';
+import 'package:hello_task_manager/widgets/task_action.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
   }
 
   void _submit() {
-    Provider.of<Task>(context, listen: false).addTask(newTask);
+    Provider.of<TaskProvider>(context, listen: false).addTask(newTask);
     Navigator.pop(context);
     _textFieldController.clear();
   }
@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(title: Text("Hello Task"),),
-      body: ToDoAction(),
+      body: TaskAction(),
       floatingActionButton: FloatingActionButton(onPressed: (){
         _showAddTextDialog();
       },
