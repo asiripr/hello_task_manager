@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello_task_manager/screens/add_task.dart';
+import 'package:hello_task_manager/widgets/task_item.dart';
 
 void main() {
   runApp(const MyApp());
